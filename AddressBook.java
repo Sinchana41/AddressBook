@@ -1,9 +1,11 @@
 package org.addressbook;
 
+import java.util.*;
 
 public class AddressBook {
 
-	Contact contact = new Contact("Sinchana", "A N", "Street 1", "Chikkamanglore", "Karnataka", 12345, "9876543210", "Sinch@mail.com");
-
-
+	List<Contact> contacts = new ArrayList<>();
+	void addContact(Contact c) {
+		contacts.add(c); 
+	}
 }
