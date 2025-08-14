@@ -33,4 +33,15 @@ public class AddressBook {
 		}
 		return false;
 	}
+
+	void displayContacts() {
+		if (contacts.isEmpty()) {
+			System.out.println("No contacts available.");
+			return;
+		}
+		System.out.println("\n--- Address Book Contacts ---");
+		for (Contact contact : contacts) {
+			System.out.println(contact);
+		}
+	}
 }
