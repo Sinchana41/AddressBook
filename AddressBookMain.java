@@ -22,7 +22,15 @@ public class AddressBookMain {
         for (Contact c : book.contacts) {
             System.out.println(c);
         }
-
-
+        
+        System.out.print("Enter the first name of the contact to delete: ");
+        String firstName = scanner.nextLine();
+        boolean result= book.deleteContact(firstName);
+        if(result) {
+        	System.out.println("Contact removed successfully");
+        }else {
+        	System.out.println("Contact not found");
+        }
+     
 	}
 }

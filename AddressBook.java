@@ -5,8 +5,8 @@ import java.util.*;
 public class AddressBook {
 
 	List<Contact> contacts = new ArrayList<>();
-	void addContact(Contact c) {
-		contacts.add(c); 
+	void addContact(Contact contact) {
+		contacts.add(contact); 
 	}
 
 	void editContact(String name, Scanner scanner) {
@@ -24,5 +24,13 @@ public class AddressBook {
 			}
 		}
 		System.out.println("Contact not found.");
+	}
+	boolean deleteContact(String name) {
+		for (Contact contact : contacts) {
+			if(contact.firstName.equalsIgnoreCase(name)) {
+				return contacts.remove(contact);
+			}
+		}
+		return false;
 	}
 }
